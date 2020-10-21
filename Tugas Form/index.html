@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1 class="judul">Web Penyedia Jasa Siaran</h1>
+		<p class="deskripsi">Live Streaming Youtube, Webex, Zoom, Google Meet, dan lain-lain.</p>
+	</header>
+	
+	<div class="wrap">
+		<nav class="menu">
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#regis">Booking</a>
+				</li>
+				<li>
+					<a href="#kontak">Find Us</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<aside class="sidebar">
+			<div class="widget">
+				<h2>Booking</h2>
+				<p>Selamat datang! Situs ini menyediakan jasa siaran untuk event online ditengah masa pandemi</p>
+			</div>
+			<div class="widget" id="list">
+				<ul>
+				<h2>List Perlengkapan</h2>
+					<li>Kamera</li>
+					<li>Proyektor</li>
+					<li>Laptop</li>
+					<li>Microphone</li>
+					<li>Mixer</li>
+					<li>Capture Card</li>
+				</ul>
+			</div>
+		</aside>
+ 
+		<div class="web">
+			<div class="conteudo">
+				<img src="img/ouotv.jpg">
+				<div class="post-info">
+					Image by <b><cite>OuO Official</cite></b><br>
+				</div>
+				<hr id="regis">
+				<h2 align="center">Booking Sekarang!!</h2>
+				<hr>
+				<form align="center">
+					Nama<br><input type="text" class="form-content" name="nama"><br>
+					<div class="form-border"></div><br>
+					Email<br><input type="email" class="form-content" name="email"><br>
+					<div class="form-border"></div><br>
+					Password<br><input type="password" class="form-content" name="pw"><br>
+					<div class="form-border"></div><br>
+					Jenis Kelamin:<br> 
+					<input type="radio" name="jk" value="Laki-laki">Laki-laki
+					<input type="radio" name="jk" value="Perempuan">Perempuan<br><br>
+					Paket yang ingin dipilih:<br>
+					<input type="checkbox" name="web" style="text-align: left; position: absolute; left: 28%;">
+					<span style="position: absolute; left: 30%">Streaming Normal (Kamera, tripod, laptop)</span><br>
+					<input type="checkbox" name="mobile" style="text-align: left; position: absolute; left: 28%;">
+					<span style="position: absolute; left: 30%">Streaming Sultan (Full Set)</span><br>
+					<input type="checkbox" name="desktop" style="text-align: left; position: absolute; left: 28%;">
+					<span style="position: absolute; left: 30%">Custom (akan dihubungi CS)</span><br><br>	
+					Add On:<br>
+					<textarea id="add" name="add" rows="4" cols="45"></textarea><br>
+					<input id="submit-btn" type="submit" name="submit" value="Booking!">
+				</form>				
+			</div>
+		</div>
+	</div>
+
+	<div class="footer" id="kontak">
+		<h3>Find Us On:</h3>
+		<div class="addr">
+			<address>
+				Instagram - @ouoofficial<br>Facebook - OuO Official<br>Telp / WA - 081234567890
+			</address>
+		</div>
+	</div>
+</body>
+</html>
