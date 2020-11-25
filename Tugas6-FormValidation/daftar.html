@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+
+    <title>Daftar - VOLANCER</title>
+    <style>
+        .signup-form {
+            width: 340px;
+            margin: 75px auto;
+        }
+        .signup-form form {
+            margin-bottom: 15px;
+            background: 	#FFA500;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        .signup-form h2 {
+            margin: 0 0 15px;
+        }
+        .form-control, .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+        .btn {        
+            font-size: 15px;
+            font-weight: bold;
+        }
+        body{
+            background-image: url("home.jpg");
+            background-size: cover;
+            background-position-y: 40%;
+            height: 400px;
+        }
+        a{
+            color: black;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="signup-form">
+        <form name="daftar" action="#" method="POST" onSubmit="validasi(this)">
+            <h2 class="text-center">Daftar</h2>     
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Nama Pengguna">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="nohp" placeholder="Nomor Handphone">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id ="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pwconfirm" name="pwconfirm" placeholder="Konfirmasi Password">
+            </div>
+            <div class="form-group">
+                <button type="submit" name="daftar_process" class="btn btn-secondary btn-block">Daftar</button>
+            </div>       
+            <p class="text-center"><a href="masuk.html">Sudah punya akun? Masuk disini</a></p>
+        </form>
+        
+    </div>
+   <script>
+       //validasi inputan form ketika kosong atau belum memenuhi suatu peraturan tertentu
+        function validasi(form){
+        var minchar = 8; //membuat minimal char dari inputan username
+        pola_email=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+        //membuat pattern inputan email
+        pola_nohp=/^[0-9]+$/;
+        //membuat pattern inputan no telepon
+  
+        //validasi dimulai
+        if (form.username.value=="") {
+        alert("Username Harus Diisi!");
+        form.username.focus();
+        return (false);
+
+        } else if (form.username.value.length <= minchar) {
+        alert("Username Harus Lebih dari 8 Karakter!");
+        form.username.focus();
+        return (false);
+
+        }else if (form.email.value=="") {
+        alert("Email Harus Diisi!");
+        form.username.focus();
+        return (false);
+
+        } else if (!pola_email.test(form.email.value)){
+        alert ('Penulisan Email tidak benar');
+        form.email.focus();
+        return (false);
+
+        } else if (form.nohp.value==""){
+          alert("Nomor Handphone tidak boleh kosong !");
+          return false;
+          
+        }if (!pola_nohp.test(form.nohp.value)){
+          alert("Nomor Handphone harus angka !");
+          return false;
+        
+        } else if (form.password.value==""){
+            alert("Password Tidak Boleh kosong!");
+            form.password.focus();
+            return (false);
+
+        } else if (form.pwconfirm.value==""){
+            alert("Konfirmasi Password Tidak Boleh kosong!");
+            form.pwconfirm.focus();
+            return (false);
+
+        } else {
+            alert('Anda berhasil menyimpan data');
+            return (true);
+        }
+        }
+    
+   </script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="js/jquery-3.5.1.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
