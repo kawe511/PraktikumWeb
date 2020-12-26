@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tugas Kalkulator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+    body{
+        background-color: lightblue;
+    }
+    .wrap {
+	position: absolute;
+	left: 10%;
+	right: 10%;
+    margin:25px auto;
+    }
+    .conteudo {
+	width: 1114px;
+	padding:25px;
+	margin:25px auto;
+    background: #fff;
+    text-align: center;
+	border:1px solid #dedede;
+	-webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+	-moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <div class="conteudo">
+            <h1>Kalkulator</h1><br>
+            <input type="text" id="box1">
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="x">x</option>
+            </select>
+            <input type="text" id="box2"><br><br>
+            <button type="button" class="btn btn-outline-primary" onclick="hitung()">=</button>
+            <h2 id="hasil"></h2>            
+        </div>
+        <script src="js/calc.js"></script>
+    </div>
+</body>
+</html>
